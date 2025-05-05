@@ -81,5 +81,5 @@ def test_delete_book_success(client):
 
 def test_delete_book_not_found(client):
     response = client.delete('/books/999')
-    assert response.status_code == 200  
+    assert response.status_code == 404  
     assert response.json == {"message": "Book deleted"}
