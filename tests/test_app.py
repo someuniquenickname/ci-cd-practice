@@ -53,7 +53,7 @@ def test_add_book_success(client):
 
 def test_add_book_invalid_data(client):
     response = client.post('/books', json={"title": "Invalid Book"})  # Нет id и author
-    assert response.status_code >= 400  .
+    assert response.status_code >= 400 
     assert "error" in response.json
 
 def test_update_book_success(client):
